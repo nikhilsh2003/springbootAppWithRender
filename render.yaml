@@ -1,0 +1,9 @@
+services:
+  - type: web
+    name: springboot-rest-api
+    env: java
+    buildCommand: ./mvnw clean install
+    startCommand: java -jar target/*.jar
+    envVars:
+      - key: MONGODB_URI
+        value: your-mongodb-uri-from-atlas
